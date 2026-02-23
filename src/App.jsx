@@ -1,12 +1,12 @@
 import Header from "./components/Header"
-import Incredient from "./components/Incredients"
+import Ingredient from "./components/Ingredients"
 import Data from "./data"
 
 export default function App() {
 
     const travelData = Data.map((item) =>{
     return (
-            <Entry 
+            <Ingredient
                     key={item.id}
                     item={item}
                         
