@@ -6,7 +6,7 @@ export default function Header() {
         <header className="header">
 
             <img src={ReactLogo} className="titleImg" alt="React logo" />
-            <h1>Chef Claude</h1>
+            <h1>Travel Diary</h1>
 
         </header>
     )
