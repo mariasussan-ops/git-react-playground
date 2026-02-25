@@ -1,30 +1,34 @@
-import Header from "./components/Header"
-import Ingredient from "./components/Ingredients"
-import Data from "./data"
+import React from "react"
+
+
 
 export default function App() {
 
-    const travelData = Data.map((item) =>{
-    return (
-            <Ingredient
-                    key={item.id}
-                    item={item}
-                        
-            />
+    const [count, setCount]= React.useState(0);
 
-    )})
+    function addCount(){
 
-    return (
-        <>
-        <Header/>
-            <main className="container">
-                {travelData}
-            </main>
-       
+        setCount(preCount => preCount + 1);
 
-        </>
+    }
+
+    function subCount(){
+
+        setCount(preCount => preCount - 1);
+    }
+    return(
+
+        <main className ="container">
+            <h1>This is a counter</h1>  
+            <div className ="counter">
+                <button onClick={addCount}>+</button>
+                <h2>{count}</h2>
+                <button onClick={subCount}>-</button>
+            </div>
+   
+     
+        </main>
     )
-
 }
 
  
