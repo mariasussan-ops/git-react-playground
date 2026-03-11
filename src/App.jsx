@@ -7,15 +7,21 @@ export default function App() {
 
 
     function signUp(formData){
-
+/*
         const email     =   formData.get("emailId");
         const password  =   formData.get("password");
         const aboutMe   =   formData.get("aboutMe");
         const gender    =   formData.get("gender");
         const skills    =   formData.getAll("skills");
         const favColor  =   formData.get("favColor");
+*/
 
-        console.log(favColor);
+        const dataObject    = Object.fromEntries(formData);
+        const skills        = formData.getAll("skills");
+
+        const allData       = { ...dataObject,skills};
+        
+        console.log(allData);
     }
     return(
 
